@@ -1,22 +1,14 @@
-// Get user info from localStorage
 const user = JSON.parse(localStorage.getItem('user'));
 document.getElementById('welcome').innerText = `Welcome, ${user.name}!`;
 
-// Show default tab
-showTab('courses');
+showTab('courses'); // default tab
 
 function showTab(tab) {
   const content = document.getElementById('content');
-  content.innerHTML = ''; // clear previous content
+  content.innerHTML = '';
 
   if (tab === 'courses') {
-    const courses = [
-      'Python Basics',
-      'ML with Scikit-learn',
-      'Deep Learning with TensorFlow',
-      'Data Visualization'
-    ];
-
+    const courses = ['Python Basics', 'ML with Scikit-learn', 'Deep Learning with TensorFlow', 'Data Visualization'];
     courses.forEach(c => {
       const div = document.createElement('div');
       div.textContent = c;
@@ -27,15 +19,7 @@ function showTab(tab) {
   }
 
   if (tab === 'roadmap') {
-    const roadmap = [
-      'Python',
-      'Statistics & Math',
-      'ML Basics',
-      'Deep Learning',
-      'Projects & Deployment',
-      'Advanced AI Topics'
-    ];
-
+    const roadmap = ['Python', 'Statistics & Math', 'ML Basics', 'Deep Learning', 'Projects & Deployment', 'Advanced AI Topics'];
     roadmap.forEach((step, index) => {
       const div = document.createElement('div');
       div.textContent = `${index + 1}. ${step}`;
@@ -45,7 +29,6 @@ function showTab(tab) {
   }
 
   if (tab === 'tasks') {
-    // Load tasks from localStorage
     let tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
 
     const input = document.createElement('input');
