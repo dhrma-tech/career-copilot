@@ -6,81 +6,8 @@
   <title>Career Copilot 🚀</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f7f7f7;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      padding: 2rem;
-    }
-
-    .login-card {
-      background-color: #fff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      width: 350px;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 0.5rem;
-      margin: 0.5rem 0;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-
-    button {
-      padding: 0.6rem 1.2rem;
-      border: none;
-      border-radius: 8px;
-      background-color: #4CAF50;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
-    .interests {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin: 0.5rem 0;
-    }
-
-    .readme {
-      max-width: 800px;
-      background: #fff;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      margin-top: 2rem;
-    }
-
-    .readme h2, .readme h3 {
-      margin-top: 1rem;
-    }
-
-    .readme pre {
-      background: #f0f0f0;
-      padding: 1rem;
-      border-radius: 8px;
-      overflow-x: auto;
-    }
-  </style>
 </head>
 <body>
-
-  <!-- Login Card -->
   <div class="login-card">
     <h1>Career Copilot 🚀</h1>
     <p>Your personalized career & education advisor</p>
@@ -103,44 +30,5 @@
       <button type="submit">Continue</button>
     </form>
   </div>
-
-  <!-- Embedded README-style Section -->
-  <div class="readme">
-    <h2>Career Copilot 🚀</h2>
-    <p><strong>One Stop Personalized Career & Education Advisor – Hackathon Prototype</strong></p>
-
-    <h3>Overview</h3>
-    <p>Career Copilot is a minimal, modern prototype website designed to guide students in their career and education journey. This hackathon project focuses on AI & Data Science (AI-DS) pathways and provides a personalized roadmap, curated courses, and a task reminder system.</p>
-
-    <h3>Features</h3>
-    <ul>
-      <li><strong>Landing/Login Page:</strong> Collects user information with a clean Notion-style design</li>
-      <li><strong>Dashboard:</strong> Courses Tab (AI-DS), Roadmap Tab (step-by-step), Tasks Tab (to-do list)</li>
-      <li><strong>Navigation:</strong> Switch between Courses, Roadmap, and Tasks</li>
-    </ul>
-
-    <h3>Tech Stack</h3>
-    <p>HTML, CSS, JavaScript (frontend only), LocalStorage for saving tasks/user info.</p>
-
-    <h3>Future Scope</h3>
-    <ul>
-      <li>Add more career fields beyond AI-DS</li>
-      <li>Integrate real course APIs (Coursera, Udemy)</li>
-      <li>Add login/auth system for multi-user support</li>
-      <li>Push notifications for task reminders</li>
-    </ul>
-  </div>
-
-  <script>
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      const branch = document.getElementById('branch').value;
-      const interests = Array.from(document.querySelectorAll('.interests input:checked')).map(i => i.value);
-      localStorage.setItem('user', JSON.stringify({ name, branch, interests }));
-      window.location.href = 'dashboard.html';
-    });
-  </script>
-
 </body>
 </html>
