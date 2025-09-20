@@ -1,4 +1,10 @@
 const user = JSON.parse(localStorage.getItem('user'));
+
+// If no user is logged in, redirect to the login page
+if (!user) {
+  window.location.href = 'index.html';
+}
+
 document.getElementById('welcome').innerText = `Welcome, ${user.name}!`;
 
 showTab('courses'); // default tab
@@ -57,3 +63,4 @@ function showTab(tab) {
     });
   }
 }
+
