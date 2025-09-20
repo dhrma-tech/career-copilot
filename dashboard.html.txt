@@ -5,16 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard - Career Copilot</title>
   <link rel="stylesheet" href="style.css">
- <script src="dashboard.js" defer></script>
+  <script src="dashboard.js" defer></script>
 </head>
 <body>
   <h1 id="welcome"></h1>
+
   <div class="tabs">
     <button onclick="showTab('courses')">Courses</button>
     <button onclick="showTab('roadmap')">Roadmap</button>
     <button onclick="showTab('tasks')">Tasks</button>
   </div>
+
   <div id="content"></div>
 </body>
 </html>
+
 
