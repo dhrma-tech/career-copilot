@@ -4,6 +4,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
   const branch = document.getElementById('branch').value;
   const interests = Array.from(document.querySelectorAll('.interests input:checked')).map(i => i.value);
   localStorage.setItem('user', JSON.stringify({ name, branch, interests }));
-  window.location.href = 'https://your-username.github.io/repo-name/dashboard.html';
+  
+  // Corrected redirect to dashboard.html
+  window.location.href = 'dashboard.html'; 
 });
-
